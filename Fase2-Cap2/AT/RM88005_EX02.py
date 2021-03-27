@@ -16,7 +16,7 @@
 
 # Nível		Porcentagem sobre o faturamento
 # Basic		30%
-# Silver		20%
+# Silver	20%
 # Gold		10%
 # Platinum	5%
 
@@ -26,7 +26,7 @@ while True:
         op = -1
         # enquanto o usuário não digitar a opção de saída
         while op != 9:
-            print("RM88005_EX01")
+            print("RM88005_EX02")
             print("1 - Excutar o programa")
             print("9 - Sair do programa")
             op = int(input("Digite a opção desejada: "))
