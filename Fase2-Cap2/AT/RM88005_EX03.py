@@ -35,7 +35,7 @@ while True:
                 elif qui > sex:
                     print("\nO dia escolhido foi quinta-feira.")
                 else:
-                    print("O dia escolhido foi sexta-feira.")
+                    print("\nO dia escolhido foi sexta-feira.")
 
     except ValueError:
         print("\nOops! Não foi informado um valor válido, tente novamente...\n\n")
