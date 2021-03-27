@@ -13,38 +13,39 @@
 # Como não estudamos listas nesse capítulo você não deve se preocupar
 # em armazenar todas as calorias digitadas, mas deve exibir o total
 # de calorias no final.
-#import os
-#import sys
+# import os
+# import sys
 
-op = -1
-# enquanto o usuário não digitar a opção de saída
-while op != 9:
-    print("RM88005_EX01")
-    print("1 - Excutar o programa")
-#    print("2 - Limpar tela")
-    print("9 - Sair do programa")
-    op = int(input("Digite a opção desejada: "))
+# Caso o usuário insira qualquer informação que não seja um número inteiro o programa deverá parar e informar o erro
+while True:
+    try:
+        op = -1
+        # enquanto o usuário não digitar a opção de saída
+        while op != 9:
+            print("RM88005_EX01")
+            print("1 - Excutar o programa")
+            # print("2 - Limpar tela")
+            print("9 - Sair do programa")
+            op = int(input("Digite a opção desejada: "))
 
-    if op == 1:
-        while True:
-            try:
+            if op == 1:
                 # quantos alimentos consumiu
                 alimentos = int(input("Digite a quantidade de alimentos consumidos hoje: ")) + 1
-            except ValueError:
-                print("\nOops! Não foi informado um valor válido, tente novamente...\n\n")
-                break
+                caloriasTotais = 0
 
-        caloriasTotais = 0
+                # numero de calorias de cada alimento
+                for i in range(1, alimentos):
+                    calorias = input("\nInforme quantas calorias tem o {}º alimento: ".format(i))
+                    calorias = int(calorias)
+                    caloriasTotais = caloriasTotais + calorias
 
-        # numero de calorias de cada alimento
-        for i in range(1, alimentos):
-            calorias = input("\nInforme quantas calorias tem o {}º alimento: ".format(i))
-            calorias = int(calorias)
-            caloriasTotais = caloriasTotais + calorias
+                # exibir o total de calorias no final
+                print("\nVocê consumiu {} calorias hoje.\n\n".format(caloriasTotais))
 
-        # exibir o total de calorias no final
-        print("\nVocê consumiu {} calorias hoje.\n\n".format(caloriasTotais))
+            # if op == 2:
+                # os.execv(sys.argv[0],  sys.argv)
+                # os.system('cls||clear')
 
-#    if op == 2:
-#        os.execv(sys.argv[0],  sys.argv)
-#        #os.system('cls||clear')
+    except ValueError:
+        print("\nOops! Não foi informado um valor válido, tente novamente...\n\n")
+    break
