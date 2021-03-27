@@ -39,21 +39,24 @@ while True:
                 print("4 - Platinum")
                 assinatura = input("\nDigite o número referente à assinatura do cliente: ")
 
-                fatCliente = input("\nInforme o faturamento anual do cliente: ")
-                fatCliente = float(fatCliente)
-
                 if assinatura == "1":
+                    fatCliente = float(input("\nInforme o faturamento anual do cliente: "))
                     bonus = fatCliente * 0.3
-                    print("\nO cliente deverá pagar R${:.2f} de bônus.".format(bonus))
+                    print("O cliente deverá pagar R${:.2f} de bônus.\n".format(bonus))
                 elif assinatura == "2":
+                    fatCliente = float(input("\nInforme o faturamento anual do cliente: "))
                     bonus = fatCliente * 0.2
-                    print("\nO cliente deverá pagar R${:.2f} de bônus.".format(bonus))
+                    print("O cliente deverá pagar R${:.2f} de bônus.\n".format(bonus))
                 elif assinatura == "3":
+                    fatCliente = float(input("\nInforme o faturamento anual do cliente: "))
                     bonus = fatCliente * 0.1
-                    print("\nO cliente deverá pagar R${:.2f} de bônus.".format(bonus))
+                    print("O cliente deverá pagar R${:.2f} de bônus.\n".format(bonus))
                 elif assinatura == "4":
+                    fatCliente = float(input("\nInforme o faturamento anual do cliente: "))
                     bonus = fatCliente * 0.05
-                    print("\nO cliente deverá pagar R${:.2f} de bônus.".format(bonus))
+                    print("O cliente deverá pagar R${:.2f} de bônus.\n".format(bonus))
+                else:
+                    print("\nNão foi informada a assinatura correta do cliente, tente novamente.\n\n")
 
     except ValueError:
         print("\nOops! Não foi informado um valor válido, tente novamente...\n\n")
