@@ -23,7 +23,7 @@ while True:
         # enquanto o usuário não digitar a opção de saída
         while op != 9:
             print("RM88005_EX01")
-            print("1 - Excutar o programa")
+            print("1 - Executar o programa")
             # print("2 - Limpar tela")
             print("9 - Sair do programa")
             op = int(input("Digite a opção desejada: "))
